@@ -4,4 +4,5 @@
 
 def adder_model(a: int, b: int) -> int:
     """model of adder"""
-    return (a + b) % (1 << 32)
+    mask = 0xFFFFFFFF
+    return (a + b) & mask
